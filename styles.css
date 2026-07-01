@@ -1,0 +1,318 @@
+/* Variables basadas en los colores de tu logotipo */
+:root {
+    --primary-blue: #008cd6;   /* Azul del logo */
+    --primary-pink: #ea2e74;   /* Rosa/Magenta del logo */
+    --primary-orange: #ff9800; /* Naranja/Amarillo del logo */
+    --dark-bg: #0a0a0a;        /* Fondo oscuro para contraste */
+    --light-bg: #ffffff;
+    --gray-light: #f4f4f9;
+    --text-dark: #222222;
+    --text-light: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--gray-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ================= HEADER / NAVBAR ================= */
+.navbar {
+    background-color: var(--light-bg);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-logo {
+    height: 45px;
+    border-radius: 8px; /* Da un toque suave a los bordes cuadrados de la imagen */
+}
+
+.brand-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-pink);
+}
+
+/* ================= HERO SECTION (BANNER) ================= */
+.hero {
+    background-color: var(--dark-bg);
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.hero-image-container {
+    width: 100%;
+    background-color: var(--light-bg); /* Fondo blanco tras el banner para que destaque */
+    padding: 20px 0;
+}
+
+.hero-banner {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.hero-text {
+    padding: 40px 20px 0;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+
+/* Botones */
+.btn-primary {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--primary-pink), var(--primary-orange));
+    color: var(--text-light);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(234, 46, 116, 0.4);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+}
+
+/* ================= SERVICIOS ================= */
+.services {
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: var(--text-dark);
+}
+
+.underline {
+    height: 4px;
+    width: 60px;
+    background-color: var(--primary-blue);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.pink-bg {
+    background-color: var(--primary-pink);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--light-bg);
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card:nth-child(1):hover { border-bottom-color: var(--primary-blue); }
+.service-card:nth-child(2):hover { border-bottom-color: var(--primary-pink); }
+.service-card:nth-child(3):hover { border-bottom-color: var(--primary-orange); }
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* ================= CONTACTO ================= */
+.contact {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    text-align: center;
+    padding: 60px 20px;
+    background-image: linear-gradient(135deg, rgba(0,140,214,0.1) 0%, rgba(234,46,116,0.1) 100%);
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.email-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-orange);
+    margin-top: 20px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #050505;
+    color: var(--text-light);
+    padding-top: 40px;
+}
+
+.footer-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #222;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    height: 60px;
+    border-radius: 10px;
+}
+
+.footer-links a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: var(--primary-pink);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* ================= POLITICA DE PRIVACIDAD ================= */
+.privacy-container {
+    background-color: var(--light-bg);
+    padding: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.privacy-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.privacy-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+}
+
+.privacy-content h2 {
+    color: var(--primary-blue);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.privacy-content p {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Responsividad básica */
+@media (max-width: 768px) {
+    .nav-content { flex-direction: column; height: auto; padding: 15px 0; gap: 15px; }
+    .footer-layout { flex-direction: column; text-align: center; }
+    .hero-text h1 { font-size: 2rem; }
+    .privacy-container { padding: 30px 20px; }
+}
